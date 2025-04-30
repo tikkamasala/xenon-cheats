@@ -1,0 +1,87 @@
+one or more multiply defined symbols found
+"bool __cdecl IL2CPP::Initialize(bool,int)" (?Initialize@IL2CPP@@YA_N_NH@Z) already defined in dllmain.obj
+"bool __cdecl IL2CPP::UnityAPI::Initialize(void)" (?Initialize@UnityAPI@IL2CPP@@YA_NXZ) already defined in dllmain.obj
+"bool __cdecl IL2CPP::UnityAPI::ResolveExport_Boolean(void * *,char const *)" (?ResolveExport_Boolean@UnityAPI@IL2CPP@@YA_NPEAPEAXPEBD@Z) already defined in dllmain.obj
+"char const * __cdecl IL2CPP::Class::Utils::MethodGetParamName(struct Unity::il2cppMethodInfo *,unsigned int)" (?MethodGetParamName@Utils@Class@IL2CPP@@YAPEBDPEAUil2cppMethodInfo@Unity@@I@Z) already defined in dllmain.obj
+"class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl Unity::Obfuscators::ROT_String(char const *,int)" (?ROT_String@Obfuscators@Unity@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEBDH@Z) already defined in dllmain.obj
+"class std::unordered_map<unsigned int,struct Unity::il2cppObject *,struct std::hash<unsigned int>,struct std::equal_to<unsigned int>,class std::allocator<struct std::pair<unsigned int const ,struct Unity::il2cppObject *> > > IL2CPP::SystemTypeCache::m_Map" (?m_Map@SystemTypeCache@IL2CPP@@3V?$unordered_map@IPEAUil2cppObject@Unity@@U?$hash@I@std@@U?$equal_to@I@4@V?$allocator@U?$pair@$$CBIPEAUil2cppObject@Unity@@@std@@@4@@std@@A) already defined in dllmain.obj
+"class std::vector<char const *,class std::allocator<char const *> > IL2CPP::SystemTypeCache::Initializer::m_List" (?m_List@Initializer@SystemTypeCache@IL2CPP@@3V?$vector@PEBDV?$allocator@PEBD@std@@@std@@A) already defined in dllmain.obj
+"class Unity::CCamera * __cdecl Unity::Camera::GetCurrent(void)" (?GetCurrent@Camera@Unity@@YAPEAVCCamera@2@XZ) already defined in dllmain.obj
+"class Unity::CCamera * __cdecl Unity::Camera::GetMain(void)" (?GetMain@Camera@Unity@@YAPEAVCCamera@2@XZ) already defined in dllmain.obj
+"class Unity::CComponent * __cdecl IL2CPP::Helper::GetMonoBehaviour(void)" (?GetMonoBehaviour@Helper@IL2CPP@@YAPEAVCComponent@Unity@@XZ) already defined in dllmain.obj
+"class Unity::CGameObject * __cdecl Unity::GameObject::CreatePrimitive(enum Unity::GameObject::m_ePrimitiveType)" (?CreatePrimitive@GameObject@Unity@@YAPEAVCGameObject@2@W4m_ePrimitiveType@12@@Z) already defined in dllmain.obj
+"class Unity::CGameObject * __cdecl Unity::GameObject::Find(char const *)" (?Find@GameObject@Unity@@YAPEAVCGameObject@2@PEBD@Z) already defined in dllmain.obj
+"enum IL2CPP::UnityAPI::m_eExportObfuscationType IL2CPP::UnityAPI::m_ExportObfuscation" (?m_ExportObfuscation@UnityAPI@IL2CPP@@3W4m_eExportObfuscationType@12@A) already defined in dllmain.obj
+"int IL2CPP::UnityAPI::m_ROTObfuscationValue" (?m_ROTObfuscationValue@UnityAPI@IL2CPP@@3HA) already defined in dllmain.obj
+"int __cdecl IL2CPP::Class::Utils::GetFieldOffset(char const *,char const *)" (?GetFieldOffset@Utils@Class@IL2CPP@@YAHPEBD0@Z) already defined in dllmain.obj
+"int __cdecl IL2CPP::Class::Utils::GetFieldOffset(struct Unity::il2cppClass *,char const *)" (?GetFieldOffset@Utils@Class@IL2CPP@@YAHPEAUil2cppClass@Unity@@PEBD@Z) already defined in dllmain.obj
+"struct IL2CPP::CallbackHook_t IL2CPP::Callback::OnLateUpdate::m_CallbackHook" (?m_CallbackHook@OnLateUpdate@Callback@IL2CPP@@3UCallbackHook_t@3@A) already defined in dllmain.obj
+"struct IL2CPP::CallbackHook_t IL2CPP::Callback::OnUpdate::m_CallbackHook" (?m_CallbackHook@OnUpdate@Callback@IL2CPP@@3UCallbackHook_t@3@A) already defined in dllmain.obj
+"struct IL2CPP::Functions_t IL2CPP::Functions" (?Functions@IL2CPP@@3UFunctions_t@1@A) already defined in dllmain.obj
+"struct IL2CPP::Globals_t IL2CPP::Globals" (?Globals@IL2CPP@@3UGlobals_t@1@A) already defined in dllmain.obj
+"struct Unity::CameraFunctions_t Unity::m_CameraFunctions" (?m_CameraFunctions@Unity@@3UCameraFunctions_t@1@A) already defined in dllmain.obj
+"struct Unity::ComponentFunctions_t Unity::m_ComponentFunctions" (?m_ComponentFunctions@Unity@@3UComponentFunctions_t@1@A) already defined in dllmain.obj
+"struct Unity::GameObjectFunctions_t Unity::m_GameObjectFunctions" (?m_GameObjectFunctions@Unity@@3UGameObjectFunctions_t@1@A) already defined in dllmain.obj
+"struct Unity::il2cppArray<class Unity::CGameObject *> * __cdecl Unity::GameObject::FindWithTag(char const *)" (?FindWithTag@GameObject@Unity@@YAPEAU?$il2cppArray@PEAVCGameObject@Unity@@@2@PEBD@Z) already defined in dllmain.obj
+"struct Unity::il2cppAssembly * * __cdecl IL2CPP::Domain::GetAssemblies(unsigned __int64 *)" (?GetAssemblies@Domain@IL2CPP@@YAPEAPEAUil2cppAssembly@Unity@@PEA_K@Z) already defined in dllmain.obj
+"struct Unity::il2cppClass * __cdecl IL2CPP::Class::Find(char const *)" (?Find@Class@IL2CPP@@YAPEAUil2cppClass@Unity@@PEBD@Z) already defined in dllmain.obj
+"struct Unity::il2cppClass * __cdecl IL2CPP::Class::GetFromName(struct Unity::il2cppImage *,char const *,char const *)" (?GetFromName@Class@IL2CPP@@YAPEAUil2cppClass@Unity@@PEAUil2cppImage@4@PEBD1@Z) already defined in dllmain.obj
+"struct Unity::il2cppClass * __cdecl IL2CPP::Class::Utils::ClassFromType(struct Unity::il2cppType *)" (?ClassFromType@Utils@Class@IL2CPP@@YAPEAUil2cppClass@Unity@@PEAUil2cppType@5@@Z) already defined in dllmain.obj
+"struct Unity::il2cppClass * __cdecl IL2CPP::Class::Utils::FilterClass(class std::vector<struct Unity::il2cppClass *,class std::allocator<struct Unity::il2cppClass *> > *,class std::initializer_list<char const *>,int)" (?FilterClass@Utils@Class@IL2CPP@@YAPEAUil2cppClass@Unity@@PEAV?$vector@PEAUil2cppClass@Unity@@V?$allocator@PEAUil2cppClass@Unity@@@std@@@std@@V?$initializer_list@PEBD@7@H@Z) already defined in dllmain.obj
+"struct Unity::il2cppFieldInfo * __cdecl IL2CPP::Class::GetFields(struct Unity::il2cppClass *,void * *)" (?GetFields@Class@IL2CPP@@YAPEAUil2cppFieldInfo@Unity@@PEAUil2cppClass@4@PEAPEAX@Z) already defined in dllmain.obj
+"struct Unity::il2cppMethodInfo * __cdecl IL2CPP::Class::GetMethods(struct Unity::il2cppClass *,void * *)" (?GetMethods@Class@IL2CPP@@YAPEAUil2cppMethodInfo@Unity@@PEAUil2cppClass@4@PEAPEAX@Z) already defined in dllmain.obj
+"struct Unity::il2cppObject * __cdecl IL2CPP::Class::GetSystemType(char const *)" (?GetSystemType@Class@IL2CPP@@YAPEAUil2cppObject@Unity@@PEBD@Z) already defined in dllmain.obj
+"struct Unity::il2cppObject * __cdecl IL2CPP::Class::GetSystemType(struct Unity::il2cppClass *)" (?GetSystemType@Class@IL2CPP@@YAPEAUil2cppObject@Unity@@PEAUil2cppClass@4@@Z) already defined in dllmain.obj
+"struct Unity::il2cppObject * __cdecl IL2CPP::SystemTypeCache::Find(char const *)" (?Find@SystemTypeCache@IL2CPP@@YAPEAUil2cppObject@Unity@@PEBD@Z) already defined in dllmain.obj
+"struct Unity::il2cppObject * __cdecl IL2CPP::SystemTypeCache::Find(unsigned int)" (?Find@SystemTypeCache@IL2CPP@@YAPEAUil2cppObject@Unity@@I@Z) already defined in dllmain.obj
+"struct Unity::il2cppObject * __cdecl IL2CPP::SystemTypeCache::Get(char const *)" (?Get@SystemTypeCache@IL2CPP@@YAPEAUil2cppObject@Unity@@PEBD@Z) already defined in dllmain.obj
+"struct Unity::il2cppObject * __cdecl IL2CPP::SystemTypeCache::Get(unsigned int)" (?Get@SystemTypeCache@IL2CPP@@YAPEAUil2cppObject@Unity@@I@Z) already defined in dllmain.obj
+"struct Unity::il2cppType * __cdecl IL2CPP::Class::GetType(struct Unity::il2cppClass *)" (?GetType@Class@IL2CPP@@YAPEAUil2cppType@Unity@@PEAUil2cppClass@4@@Z) already defined in dllmain.obj
+"struct Unity::il2cppType * __cdecl IL2CPP::Class::Utils::GetMethodParamType(struct Unity::il2cppMethodInfo *,unsigned int)" (?GetMethodParamType@Utils@Class@IL2CPP@@YAPEAUil2cppType@Unity@@PEAUil2cppMethodInfo@5@I@Z) already defined in dllmain.obj
+"struct Unity::LayerMaskFunctions_t Unity::m_LayerMaskFunctions" (?m_LayerMaskFunctions@Unity@@3ULayerMaskFunctions_t@1@A) already defined in dllmain.obj
+"struct Unity::ObjectFunctions_t Unity::m_ObjectFunctions" (?m_ObjectFunctions@Unity@@3UObjectFunctions_t@1@A) already defined in dllmain.obj
+"struct Unity::RigidbodyFunctions_t Unity::m_RigidbodyFunctions" (?m_RigidbodyFunctions@Unity@@3URigidbodyFunctions_t@1@A) already defined in dllmain.obj
+"struct Unity::System_String * __cdecl IL2CPP::String::New(char const *)" (?New@String@IL2CPP@@YAPEAUSystem_String@Unity@@PEBD@Z) already defined in dllmain.obj
+"struct Unity::System_String * __cdecl IL2CPP::String::New(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?New@String@IL2CPP@@YAPEAUSystem_String@Unity@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) already defined in dllmain.obj
+"struct Unity::System_String * __cdecl IL2CPP::String::NoGC::New(char const *)" (?New@NoGC@String@IL2CPP@@YAPEAUSystem_String@Unity@@PEBD@Z) already defined in dllmain.obj
+"struct Unity::System_String * __cdecl IL2CPP::String::NoGC::New(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?New@NoGC@String@IL2CPP@@YAPEAUSystem_String@Unity@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) already defined in dllmain.obj
+"struct Unity::System_String * __cdecl Unity::LayerMask::LayerToName(unsigned int)" (?LayerToName@LayerMask@Unity@@YAPEAUSystem_String@2@I@Z) already defined in dllmain.obj
+"struct Unity::TransformFunctions_t Unity::m_TransformFunctions" (?m_TransformFunctions@Unity@@3UTransformFunctions_t@1@A) already defined in dllmain.obj
+"unsigned int __cdecl IL2CPP::Utils::Hash::Get(char const *)" (?Get@Hash@Utils@IL2CPP@@YAIPEBD@Z) already defined in dllmain.obj
+"unsigned int __cdecl Unity::LayerMask::NameToLayer(char const *)" (?NameToLayer@LayerMask@Unity@@YAIPEBD@Z) already defined in dllmain.obj
+"void * * __cdecl IL2CPP::Utils::VTable::FindFunction(void * *,int,class std::initializer_list<unsigned char>)" (?FindFunction@VTable@Utils@IL2CPP@@YAPEAPEAXPEAPEAXHV?$initializer_list@E@std@@@Z) already defined in dllmain.obj
+"void * __cdecl IL2CPP::Class::Utils::FilterClassToMethodPointer(class std::vector<struct Unity::il2cppClass *,class std::allocator<struct Unity::il2cppClass *> > *,char const *,int)" (?FilterClassToMethodPointer@Utils@Class@IL2CPP@@YAPEAXPEAV?$vector@PEAUil2cppClass@Unity@@V?$allocator@PEAUil2cppClass@Unity@@@std@@@std@@PEBDH@Z) already defined in dllmain.obj
+"void * __cdecl IL2CPP::Class::Utils::GetMethodPointer(char const *,char const *,class std::initializer_list<char const *>)" (?GetMethodPointer@Utils@Class@IL2CPP@@YAPEAXPEBD0V?$initializer_list@PEBD@std@@@Z) already defined in dllmain.obj
+"void * __cdecl IL2CPP::Class::Utils::GetMethodPointer(char const *,char const *,int)" (?GetMethodPointer@Utils@Class@IL2CPP@@YAPEAXPEBD0H@Z) already defined in dllmain.obj
+"void * __cdecl IL2CPP::Class::Utils::GetMethodPointer(struct Unity::il2cppClass *,char const *,int)" (?GetMethodPointer@Utils@Class@IL2CPP@@YAPEAXPEAUil2cppClass@Unity@@PEBDH@Z) already defined in dllmain.obj
+"void * __cdecl IL2CPP::Class::Utils::GetStaticField(char const *,char const *)" (?GetStaticField@Utils@Class@IL2CPP@@YAPEAXPEBD0@Z) already defined in dllmain.obj
+"void * __cdecl IL2CPP::Class::Utils::GetStaticField(struct Unity::il2cppClass *,char const *)" (?GetStaticField@Utils@Class@IL2CPP@@YAPEAXPEAUil2cppClass@Unity@@PEBD@Z) already defined in dllmain.obj
+"void * __cdecl IL2CPP::Domain::Get(void)" (?Get@Domain@IL2CPP@@YAPEAXXZ) already defined in dllmain.obj
+"void * __cdecl IL2CPP::ResolveCall(char const *)" (?ResolveCall@IL2CPP@@YAPEAXPEBD@Z) already defined in dllmain.obj
+"void * __cdecl IL2CPP::Thread::Attach(void *)" (?Attach@Thread@IL2CPP@@YAPEAXPEAX@Z) already defined in dllmain.obj
+"void * __cdecl IL2CPP::UnityAPI::ResolveExport(char const *)" (?ResolveExport@UnityAPI@IL2CPP@@YAPEAXPEBD@Z) already defined in dllmain.obj
+"void __cdecl IL2CPP::Callback::Initialize(void)" (?Initialize@Callback@IL2CPP@@YAXXZ) already defined in dllmain.obj
+"void __cdecl IL2CPP::Callback::OnLateUpdate::Add(void *)" (?Add@OnLateUpdate@Callback@IL2CPP@@YAXPEAX@Z) already defined in dllmain.obj
+"void __cdecl IL2CPP::Callback::OnLateUpdate::Hook(void *)" (?Hook@OnLateUpdate@Callback@IL2CPP@@YAXPEAX@Z) already defined in dllmain.obj
+"void __cdecl IL2CPP::Callback::OnUpdate::Add(void *)" (?Add@OnUpdate@Callback@IL2CPP@@YAXPEAX@Z) already defined in dllmain.obj
+"void __cdecl IL2CPP::Callback::OnUpdate::Hook(void *)" (?Hook@OnUpdate@Callback@IL2CPP@@YAXPEAX@Z) already defined in dllmain.obj
+"void __cdecl IL2CPP::Callback::Uninitialize(void)" (?Uninitialize@Callback@IL2CPP@@YAXXZ) already defined in dllmain.obj
+"void __cdecl IL2CPP::Class::FetchClasses(class std::vector<struct Unity::il2cppClass *,class std::allocator<struct Unity::il2cppClass *> > *,char const *,char const *)" (?FetchClasses@Class@IL2CPP@@YAXPEAV?$vector@PEAUil2cppClass@Unity@@V?$allocator@PEAUil2cppClass@Unity@@@std@@@std@@PEBD1@Z) already defined in dllmain.obj
+"void __cdecl IL2CPP::Class::FetchFields(struct Unity::il2cppClass *,class std::vector<struct Unity::il2cppFieldInfo *,class std::allocator<struct Unity::il2cppFieldInfo *> > *,void *)" (?FetchFields@Class@IL2CPP@@YAXPEAUil2cppClass@Unity@@PEAV?$vector@PEAUil2cppFieldInfo@Unity@@V?$allocator@PEAUil2cppFieldInfo@Unity@@@std@@@std@@PEAX@Z) already defined in dllmain.obj
+"void __cdecl IL2CPP::Class::FetchMethods(struct Unity::il2cppClass *,class std::vector<struct Unity::il2cppMethodInfo *,class std::allocator<struct Unity::il2cppMethodInfo *> > *,void *)" (?FetchMethods@Class@IL2CPP@@YAXPEAUil2cppClass@Unity@@PEAV?$vector@PEAUil2cppMethodInfo@Unity@@V?$allocator@PEAUil2cppMethodInfo@Unity@@@std@@@std@@PEAX@Z) already defined in dllmain.obj
+"void __cdecl IL2CPP::Class::Utils::SetStaticField(char const *,char const *,void *)" (?SetStaticField@Utils@Class@IL2CPP@@YAXPEBD0PEAX@Z) already defined in dllmain.obj
+"void __cdecl IL2CPP::Class::Utils::SetStaticField(struct Unity::il2cppClass *,char const *,void *)" (?SetStaticField@Utils@Class@IL2CPP@@YAXPEAUil2cppClass@Unity@@PEBDPEAX@Z) already defined in dllmain.obj
+"void __cdecl IL2CPP::SystemTypeCache::Add(char const *,struct Unity::il2cppObject *)" (?Add@SystemTypeCache@IL2CPP@@YAXPEBDPEAUil2cppObject@Unity@@@Z) already defined in dllmain.obj
+"void __cdecl IL2CPP::SystemTypeCache::Add(unsigned int,struct Unity::il2cppObject *)" (?Add@SystemTypeCache@IL2CPP@@YAXIPEAUil2cppObject@Unity@@@Z) already defined in dllmain.obj
+"void __cdecl IL2CPP::SystemTypeCache::Initializer::Add(char const *)" (?Add@Initializer@SystemTypeCache@IL2CPP@@YAXPEBD@Z) already defined in dllmain.obj
+"void __cdecl IL2CPP::SystemTypeCache::Initializer::PreCache(void)" (?PreCache@Initializer@SystemTypeCache@IL2CPP@@YAXXZ) already defined in dllmain.obj
+"void __cdecl IL2CPP::Thread::Create(void *,void *)" (?Create@Thread@IL2CPP@@YAXPEAX0@Z) already defined in dllmain.obj
+"void __cdecl IL2CPP::Thread::Detach(void *)" (?Detach@Thread@IL2CPP@@YAXPEAX@Z) already defined in dllmain.obj
+"void __cdecl IL2CPP::Utils::VTable::ReplaceFunction(void * *,void *,void * *)" (?ReplaceFunction@VTable@Utils@IL2CPP@@YAXPEAPEAXPEAX0@Z) already defined in dllmain.obj
+"void __cdecl Unity::Camera::Initialize(void)" (?Initialize@Camera@Unity@@YAXXZ) already defined in dllmain.obj
+"void __cdecl Unity::Component::Initialize(void)" (?Initialize@Component@Unity@@YAXXZ) already defined in dllmain.obj
+"void __cdecl Unity::GameObject::Initialize(void)" (?Initialize@GameObject@Unity@@YAXXZ) already defined in dllmain.obj
+"void __cdecl Unity::LayerMask::Initialize(void)" (?Initialize@LayerMask@Unity@@YAXXZ) already defined in dllmain.obj
+"void __cdecl Unity::Object::Initialize(void)" (?Initialize@Object@Unity@@YAXXZ) already defined in dllmain.obj
+"void __cdecl Unity::RigidBody::Initialize(void)" (?Initialize@RigidBody@Unity@@YAXXZ) already defined in dllmain.obj
+"void __cdecl Unity::Transform::Initialize(void)" (?Initialize@Transform@Unity@@YAXXZ) already defined in dllmain.obj
