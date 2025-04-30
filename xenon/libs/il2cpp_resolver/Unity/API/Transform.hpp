@@ -18,38 +18,38 @@ namespace Unity
 		void* m_SetLocalPosition = nullptr;
 		void* m_SetLocalScale = nullptr;
 	};
-	TransformFunctions_t m_TransformFunctions;
+	inline TransformFunctions_t m_TransformFunctions;
 
 	class CTransform : public IL2CPP::CClass
 	{
 	public:
-		CTransform* GetParent()
+		inline CTransform* GetParent()
 		{
 			return reinterpret_cast<CTransform*(UNITY_CALLING_CONVENTION)(void*)>(m_TransformFunctions.m_GetParent)(this);
 		}
 
-		CTransform* GetRoot()
+		inline CTransform* GetRoot()
 		{
 			return reinterpret_cast<CTransform*(UNITY_CALLING_CONVENTION)(void*)>(m_TransformFunctions.m_GetRoot)(this);
 		}
 
-		CTransform* GetChild(int m_iIndex)
+		inline CTransform* GetChild(int m_iIndex)
 		{
 			return reinterpret_cast<CTransform*(UNITY_CALLING_CONVENTION)(void*, int)>(m_TransformFunctions.m_GetChild)(this, m_iIndex);
 		}
 
-		int GetChildCount()
+		inline int GetChildCount()
 		{
 			return reinterpret_cast<int(UNITY_CALLING_CONVENTION)(void*)>(m_TransformFunctions.m_GetChildCount)(this);
 		}
 
-		CTransform* FindChild(const char* path, bool isActiveOnly)
+		inline CTransform* FindChild(const char* path, bool isActiveOnly)
 		{
 			return reinterpret_cast<CTransform * (UNITY_CALLING_CONVENTION)(void*, System_String*, bool)>(m_TransformFunctions.m_FindChild)(this, IL2CPP::String::New(path), isActiveOnly);
 		}
 
 		// e.g CGameObject->GetTransform()->FindChild("child1/child2/child3");
-		CTransform* FindChild(const char* path)
+		inline CTransform* FindChild(const char* path)
 		{
 			if (path == NULL) {
 				return nullptr;
@@ -57,50 +57,50 @@ namespace Unity
 			return FindChild(path, false);
 		}
 
-		Vector3 GetPosition()
+		inline Vector3 GetPosition()
 		{
 			Vector3 vRet;
 			reinterpret_cast<void(UNITY_CALLING_CONVENTION)(void*, Vector3&)>(m_TransformFunctions.m_GetPosition)(this, vRet);
 			return vRet;
 		}
 
-		Quaternion GetRotation()
+		inline Quaternion GetRotation()
 		{
 			Quaternion m_qRet;
 			reinterpret_cast<void(UNITY_CALLING_CONVENTION)(void*, Quaternion&)>(m_TransformFunctions.m_GetRotation)(this, m_qRet);
 			return m_qRet;
 		}
 
-		Vector3 GetLocalPosition()
+		inline Vector3 GetLocalPosition()
 		{
 			Vector3 vRet;
 			reinterpret_cast<void(UNITY_CALLING_CONVENTION)(void*, Vector3&)>(m_TransformFunctions.m_GetLocalPosition)(this, vRet);
 			return vRet;
 		}
 
-		Vector3 GetLocalScale()
+		inline Vector3 GetLocalScale()
 		{
 			Vector3 vRet;
 			reinterpret_cast<void(UNITY_CALLING_CONVENTION)(void*, Vector3&)>(m_TransformFunctions.m_GetLocalScale)(this, vRet);
 			return vRet;
 		}
 
-		void SetPosition(Vector3 m_vVector)
+		inline void SetPosition(Vector3 m_vVector)
 		{
 			reinterpret_cast<void(UNITY_CALLING_CONVENTION)(void*, Vector3)>(m_TransformFunctions.m_SetPosition)(this, m_vVector);
 		}
 
-		void SetRotation(Quaternion m_qQuat)
+		inline void SetRotation(Quaternion m_qQuat)
 		{
 			reinterpret_cast<void(UNITY_CALLING_CONVENTION)(void*, Quaternion)>(m_TransformFunctions.m_SetRotation)(this, m_qQuat);
 		}
 
-		void SetLocalPosition(Vector3 m_vVector)
+		inline void SetLocalPosition(Vector3 m_vVector)
 		{
 			reinterpret_cast<void(UNITY_CALLING_CONVENTION)(void*, Vector3)>(m_TransformFunctions.m_SetLocalPosition)(this, m_vVector);
 		}
 
-		void SetLocalScale(Vector3 m_vVector)
+		inline void SetLocalScale(Vector3 m_vVector)
 		{
 			reinterpret_cast<void(UNITY_CALLING_CONVENTION)(void*, Vector3)>(m_TransformFunctions.m_SetLocalScale)(this, m_vVector);
 		}
@@ -108,7 +108,7 @@ namespace Unity
 
 	namespace Transform
 	{
-		void Initialize()
+		inline void Initialize()
 		{
 			IL2CPP::SystemTypeCache::Initializer::Add(UNITY_TRANSFORM_CLASS);
 

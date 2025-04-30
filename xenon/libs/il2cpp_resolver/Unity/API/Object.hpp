@@ -10,7 +10,7 @@ namespace Unity
 		void* m_FindObjectsOfType = nullptr;
 		void* m_GetName = nullptr;
 	};
-	ObjectFunctions_t m_ObjectFunctions;
+	inline ObjectFunctions_t m_ObjectFunctions;
 
 	class CObject : public IL2CPP::CClass
 	{
@@ -28,7 +28,7 @@ namespace Unity
 
 	namespace Object
 	{
-		void Initialize()
+		inline void Initialize()
 		{
 			IL2CPP::SystemTypeCache::Initializer::Add(UNITY_OBJECT_CLASS);
 

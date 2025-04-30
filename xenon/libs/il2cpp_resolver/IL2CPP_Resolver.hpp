@@ -97,10 +97,10 @@ namespace IL2CPP
 			ROT = 1,
 			MAX = 2,
 		};
-		m_eExportObfuscationType m_ExportObfuscation = m_eExportObfuscationType::None;
+		inline m_eExportObfuscationType m_ExportObfuscation = m_eExportObfuscationType::None;
 
-		int m_ROTObfuscationValue = -1;
-		void* ResolveExport(const char* m_Name)
+		inline int m_ROTObfuscationValue = -1;
+		inline void* ResolveExport(const char* m_Name)
 		{
 			switch (m_ExportObfuscation)
 			{
@@ -129,14 +129,14 @@ namespace IL2CPP
 			return nullptr;
 		}
 
-		bool ResolveExport_Boolean(void** m_Address, const char* m_Name)
+		inline bool ResolveExport_Boolean(void** m_Address, const char* m_Name)
 		{
 			*m_Address = ResolveExport(m_Name);
 			IL2CPP_ASSERT(*m_Address != nullptr && "Couldn't resolve export!");
 			return (*m_Address);
 		}
 
-		bool Initialize()
+		inline bool Initialize()
 		{
 			bool m_InitExportResolved = false;
 			for (int i = 0; m_eExportObfuscationType::MAX > i; ++i)
@@ -208,7 +208,7 @@ namespace IL2CPP
 	*		m_WaitForModule - Will wait for main module if you're loading your dll earlier than the main module.
 	*		m_MaxSecondsWait - Max seconds it will wait for main module to load otherwise will return false to prevent infinite loop.
 	*/
-	bool Initialize(bool m_WaitForModule = false, int m_MaxSecondsWait = 60)
+	inline bool Initialize(bool m_WaitForModule = false, int m_MaxSecondsWait = 60)
 	{
 		Globals.m_GameAssembly = GetModuleHandleA(IL2CPP_MAIN_MODULE);
 

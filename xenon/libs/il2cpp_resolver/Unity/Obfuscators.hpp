@@ -5,7 +5,7 @@ namespace Unity
 	namespace Obfuscators
 	{
         // Should do the basic work
-        std::string ROT_String(const char* pString, int iValue)
+        inline std::string ROT_String(const char* pString, int iValue)
         {
             std::string sRet;
             size_t sSize = strlen(pString);

@@ -9,29 +9,29 @@ namespace Unity
 		void* m_SetDetectCollisions = nullptr;
 		void* m_SetVelocity = nullptr;
 	};
-	RigidbodyFunctions_t m_RigidbodyFunctions;
+	inline RigidbodyFunctions_t m_RigidbodyFunctions;
 
 	class CRigidbody : public IL2CPP::CClass
 	{
 	public:
-		bool GetDetectCollisions()
+		inline bool GetDetectCollisions()
 		{
 			return reinterpret_cast<bool(UNITY_CALLING_CONVENTION)(void*)>(m_RigidbodyFunctions.m_GetDetectCollisions)(this);
 		}
 
-		void SetDetectCollisions(bool m_bDetect)
+		inline void SetDetectCollisions(bool m_bDetect)
 		{
 			reinterpret_cast<void(UNITY_CALLING_CONVENTION)(void*, bool)>(m_RigidbodyFunctions.m_SetDetectCollisions)(this, m_bDetect);
 		}
 
-		Vector3 GetVelocity()
+		inline Vector3 GetVelocity()
 		{
 			Vector3 vRet;
 			reinterpret_cast<void(UNITY_CALLING_CONVENTION)(void*, Vector3&)>(m_RigidbodyFunctions.m_GetVelocity)(this, vRet);
 			return vRet;
 		}
 
-		void SetVelocity(Vector3 m_vVector)
+		inline void SetVelocity(Vector3 m_vVector)
 		{
 			reinterpret_cast<void(UNITY_CALLING_CONVENTION)(void*, Vector3)>(m_RigidbodyFunctions.m_SetVelocity)(this, m_vVector);
 		}
@@ -39,7 +39,7 @@ namespace Unity
 
 	namespace RigidBody
 	{
-		void Initialize()
+		inline void Initialize()
 		{
 			IL2CPP::SystemTypeCache::Initializer::Add(UNITY_RIGIDBODY_CLASS);
 

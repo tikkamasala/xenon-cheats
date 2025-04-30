@@ -6,7 +6,7 @@ namespace IL2CPP
     {
         namespace VTable
         {
-            void ReplaceFunction(void** m_VTableFunc, void* m_NewFunc, void** m_Original = nullptr)
+            inline void ReplaceFunction(void** m_VTableFunc, void* m_NewFunc, void** m_Original = nullptr)
             {
                 if (!m_VTableFunc)
                     return;
@@ -22,7 +22,7 @@ namespace IL2CPP
                 VirtualProtect(m_VTableFunc, sizeof(void*), m_OldProtection, &m_OldProtection);
             }
 
-            void** FindFunction(void** m_VTable, int m_Count, std::initializer_list<unsigned char> m_Opcodes)
+            inline void** FindFunction(void** m_VTable, int m_Count, std::initializer_list<unsigned char> m_Opcodes)
             {
                 size_t m_OpcodeSize = m_Opcodes.size();
                 const void* m_OpcodesPtr = m_Opcodes.begin();

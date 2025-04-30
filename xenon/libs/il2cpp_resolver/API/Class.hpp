@@ -4,12 +4,12 @@ namespace IL2CPP
 {
     namespace Class
     {
-        Unity::il2cppFieldInfo* GetFields(Unity::il2cppClass* m_pClass, void** m_pIterator)
+        inline Unity::il2cppFieldInfo* GetFields(Unity::il2cppClass* m_pClass, void** m_pIterator)
         {
             return reinterpret_cast<Unity::il2cppFieldInfo * (IL2CPP_CALLING_CONVENTION)(void*, void**)>(Functions.m_ClassGetFields)(m_pClass, m_pIterator);
         }
 
-        void FetchFields(Unity::il2cppClass* m_pClass, std::vector<Unity::il2cppFieldInfo*>* m_pVector, void* m_pFieldIterator = nullptr)
+        inline void FetchFields(Unity::il2cppClass* m_pClass, std::vector<Unity::il2cppFieldInfo*>* m_pVector, void* m_pFieldIterator = nullptr)
         {
             m_pVector->clear();
 
@@ -23,12 +23,12 @@ namespace IL2CPP
             }
         }
 
-        Unity::il2cppMethodInfo* GetMethods(Unity::il2cppClass* m_pClass, void** m_pIterator)
+        inline Unity::il2cppMethodInfo* GetMethods(Unity::il2cppClass* m_pClass, void** m_pIterator)
         {
             return reinterpret_cast<Unity::il2cppMethodInfo * (IL2CPP_CALLING_CONVENTION)(void*, void**)>(Functions.m_ClassGetMethods)(m_pClass, m_pIterator);
         }
 
-        void FetchMethods(Unity::il2cppClass* m_pClass, std::vector<Unity::il2cppMethodInfo*>* m_pVector, void* m_pMethodIterator = nullptr)
+        inline void FetchMethods(Unity::il2cppClass* m_pClass, std::vector<Unity::il2cppMethodInfo*>* m_pVector, void* m_pMethodIterator = nullptr)
         {
             m_pVector->clear();
 
@@ -42,22 +42,22 @@ namespace IL2CPP
             }
         }
 
-        Unity::il2cppType* GetType(Unity::il2cppClass* m_pClass)
+        inline Unity::il2cppType* GetType(Unity::il2cppClass* m_pClass)
         {
             return reinterpret_cast<Unity::il2cppType * (IL2CPP_CALLING_CONVENTION)(void*)>(Functions.m_ClassGetType)(m_pClass);
         }
 
-        Unity::il2cppObject* GetSystemType(Unity::il2cppClass* m_pClass)
+        inline Unity::il2cppObject* GetSystemType(Unity::il2cppClass* m_pClass)
         {
             return reinterpret_cast<Unity::il2cppObject * (IL2CPP_CALLING_CONVENTION)(void*)>(Functions.m_TypeGetObject)(GetType(m_pClass));
         }
 
-        Unity::il2cppClass* GetFromName(Unity::il2cppImage* m_pImage, const char* m_pNamespace, const char* m_pName)
+        inline Unity::il2cppClass* GetFromName(Unity::il2cppImage* m_pImage, const char* m_pNamespace, const char* m_pName)
         {
             return reinterpret_cast<Unity::il2cppClass * (IL2CPP_CALLING_CONVENTION)(void*, const char*, const char*)>(Functions.m_ClassFromName)(m_pImage, m_pNamespace, m_pName);
         }
 
-        Unity::il2cppClass* Find(const char* m_pName)
+        inline Unity::il2cppClass* Find(const char* m_pName)
         {
             size_t m_sAssembliesCount = 0U;
             Unity::il2cppAssembly** m_pAssemblies = Domain::GetAssemblies(&m_sAssembliesCount);
@@ -94,7 +94,7 @@ namespace IL2CPP
             return m_pClassReturn;
         }
 
-        Unity::il2cppObject* GetSystemType(const char* m_pClassName)
+        inline Unity::il2cppObject* GetSystemType(const char* m_pClassName)
         {
             Unity::il2cppClass* m_pClass = Find(m_pClassName);
             if (!m_pClass)
@@ -103,7 +103,7 @@ namespace IL2CPP
             return GetSystemType(m_pClass);
         }
 
-        void FetchClasses(std::vector<Unity::il2cppClass*>* m_pVector, const char* m_pModuleName, const char* m_pNamespace)
+        inline void FetchClasses(std::vector<Unity::il2cppClass*>* m_pVector, const char* m_pModuleName, const char* m_pNamespace)
         {
             m_pVector->clear();
 
@@ -146,7 +146,7 @@ namespace IL2CPP
 
         namespace Utils
         {
-            int GetFieldOffset(Unity::il2cppClass* m_pClass, const char* m_pName)
+            inline int GetFieldOffset(Unity::il2cppClass* m_pClass, const char* m_pName)
             {
                 void* m_pFieldIterator = nullptr;
                 while (1)
@@ -162,7 +162,7 @@ namespace IL2CPP
                 return -1;
             }
 
-            int GetFieldOffset(const char* m_pClassName, const char* m_pName)
+            inline int GetFieldOffset(const char* m_pClassName, const char* m_pName)
             {
                 Unity::il2cppClass* m_pClass = Find(m_pClassName);
                 if (m_pClass)
@@ -171,19 +171,19 @@ namespace IL2CPP
                 return -1;
             }
 
-            void SetStaticField(Unity::il2cppClass* m_pClass, const char* m_pMemberName, void* m_pValue) {
+            inline void SetStaticField(Unity::il2cppClass* m_pClass, const char* m_pMemberName, void* m_pValue) {
                 Unity::il2cppFieldInfo* m_pField = reinterpret_cast<Unity::il2cppFieldInfo * (IL2CPP_CALLING_CONVENTION)(void*, const char*)>(Functions.m_ClassGetFieldFromName)(m_pClass, m_pMemberName);
                 if (m_pField)
                     reinterpret_cast<void (IL2CPP_CALLING_CONVENTION)(Unity::il2cppFieldInfo*, void*)>(Functions.m_FieldStaticSetValue)(m_pField, m_pValue);
             }
 
-            void SetStaticField(const char* m_pClassName, const char* m_pMemberName, void* m_pValue) {
+            inline void SetStaticField(const char* m_pClassName, const char* m_pMemberName, void* m_pValue) {
                 Unity::il2cppClass* m_pClass = Find(m_pClassName);
                 if (m_pClass)
                     SetStaticField(m_pClass, m_pMemberName, m_pValue);
             }
 
-            void* GetStaticField(Unity::il2cppClass* m_pClass, const char* m_pMemberName) {
+            inline void* GetStaticField(Unity::il2cppClass* m_pClass, const char* m_pMemberName) {
                 Unity::il2cppFieldInfo* m_pField = reinterpret_cast<Unity::il2cppFieldInfo * (IL2CPP_CALLING_CONVENTION)(void*, const char*)>(Functions.m_ClassGetFieldFromName)(m_pClass, m_pMemberName);
                 void* m_pValue = nullptr;
                 if (m_pField)
@@ -192,7 +192,7 @@ namespace IL2CPP
                 return m_pValue;
             }
 
-            void* GetStaticField(const char* m_pClassName, const char* m_pMemberName)
+            inline void* GetStaticField(const char* m_pClassName, const char* m_pMemberName)
             {
                 Unity::il2cppClass* m_pClass = Find(m_pClassName);
                 if (m_pClass)
@@ -201,7 +201,7 @@ namespace IL2CPP
                 return nullptr;
             }
 
-            void* GetMethodPointer(Unity::il2cppClass* m_pClass, const char* m_pMethodName, int m_iArgs = -1)
+            inline void* GetMethodPointer(Unity::il2cppClass* m_pClass, const char* m_pMethodName, int m_iArgs = -1)
             {
                 Unity::il2cppMethodInfo* pMethod = reinterpret_cast<Unity::il2cppMethodInfo * (IL2CPP_CALLING_CONVENTION)(void*, const char*, int)>(Functions.m_ClassGetMethodFromName)(m_pClass, m_pMethodName, m_iArgs);
                 if (!pMethod) return nullptr;
@@ -209,7 +209,7 @@ namespace IL2CPP
                 return pMethod->m_pMethodPointer;
             }
 
-            void* GetMethodPointer(const char* m_pClassName, const char* m_pMethodName, int m_iArgs = -1)
+            inline void* GetMethodPointer(const char* m_pClassName, const char* m_pMethodName, int m_iArgs = -1)
             {
                 Unity::il2cppClass* m_pClass = Find(m_pClassName);
                 if (m_pClass)
@@ -218,7 +218,7 @@ namespace IL2CPP
                 return nullptr;
             }
 
-            const char* MethodGetParamName(Unity::il2cppMethodInfo* m_pMethodInfo, uint32_t index)
+            inline const char* MethodGetParamName(Unity::il2cppMethodInfo* m_pMethodInfo, uint32_t index)
             {
                 if (index >= m_pMethodInfo->m_uArgsCount)
                     return nullptr;
@@ -226,19 +226,19 @@ namespace IL2CPP
                 return reinterpret_cast<const char * (IL2CPP_CALLING_CONVENTION)(void*, uint32_t)>(Functions.m_MethodGetParamName)(m_pMethodInfo, index);
             }
 
-            Unity::il2cppType* GetMethodParamType(Unity::il2cppMethodInfo* m_pMethodInfo, uint32_t index) {
+            inline Unity::il2cppType* GetMethodParamType(Unity::il2cppMethodInfo* m_pMethodInfo, uint32_t index) {
                 if (index >= m_pMethodInfo->m_uArgsCount)
                     return nullptr;
 
                 return reinterpret_cast<Unity::il2cppType * (IL2CPP_CALLING_CONVENTION)(void*, uint32_t)>(Functions.m_MethodGetParam)(m_pMethodInfo, index);
             }
 
-            Unity::il2cppClass* ClassFromType(Unity::il2cppType * type)
+            inline Unity::il2cppClass* ClassFromType(Unity::il2cppType * type)
             {
                 return reinterpret_cast<Unity::il2cppClass * (IL2CPP_CALLING_CONVENTION)(void*)>(Functions.m_ClassFromIl2cppType)(type);
             }
 
-            void* GetMethodPointer(const char* m_pClassName, const char* m_pMethodName, std::initializer_list<const char*> m_vNames)
+            inline void* GetMethodPointer(const char* m_pClassName, const char* m_pMethodName, std::initializer_list<const char*> m_vNames)
             {
                 Unity::il2cppClass* m_pClass = Find(m_pClassName);
                 if (!m_pClass)
@@ -287,7 +287,7 @@ namespace IL2CPP
                 return nullptr;
             }
 
-            Unity::il2cppClass* FilterClass(std::vector<Unity::il2cppClass*>* m_pClasses, std::initializer_list<const char*> m_vNames, int m_iFoundCount = -1)
+            inline Unity::il2cppClass* FilterClass(std::vector<Unity::il2cppClass*>* m_pClasses, std::initializer_list<const char*> m_vNames, int m_iFoundCount = -1)
             {
                 int m_iNamesCount = static_cast<int>(m_vNames.size());
                 const char** m_pNames = const_cast<const char**>(m_vNames.begin());
@@ -334,7 +334,7 @@ namespace IL2CPP
                 return m_pReturn;
             }
 
-            void* FilterClassToMethodPointer(std::vector<Unity::il2cppClass*>* m_pClasses, const char* m_pMethodName, int m_iArgs = -1)
+            inline void* FilterClassToMethodPointer(std::vector<Unity::il2cppClass*>* m_pClasses, const char* m_pMethodName, int m_iArgs = -1)
             {
                 void* m_pMethodPointer = nullptr;
                 for (size_t c = 0; m_pClasses->size() > c; ++c)
@@ -369,32 +369,32 @@ namespace IL2CPP
         void* m_CachedPtr = nullptr;
 
         // Wrappers for namespace, ah...
-        Unity::il2cppFieldInfo* GetFields(void** m_pIterator)
+        inline Unity::il2cppFieldInfo* GetFields(void** m_pIterator)
         {
             return Class::GetFields(m_Object.m_pClass, m_pIterator);
         }
 
-        void FetchFields(std::vector<Unity::il2cppFieldInfo*>* m_pVector, void* m_pFieldIterator = nullptr)
+        inline void FetchFields(std::vector<Unity::il2cppFieldInfo*>* m_pVector, void* m_pFieldIterator = nullptr)
         {
             Class::FetchFields(m_Object.m_pClass, m_pVector, m_pFieldIterator);
         }
 
-        Unity::il2cppMethodInfo* GetMethods(void** m_pIterator)
+        inline Unity::il2cppMethodInfo* GetMethods(void** m_pIterator)
         {
             return Class::GetMethods(m_Object.m_pClass, m_pIterator);
         }
 
-        void FetchMethods(std::vector<Unity::il2cppMethodInfo*>* m_pVector, void* m_pMethodIterator = nullptr)
+        inline void FetchMethods(std::vector<Unity::il2cppMethodInfo*>* m_pVector, void* m_pMethodIterator = nullptr)
         {
             Class::FetchMethods(m_Object.m_pClass, m_pVector, m_pMethodIterator);
         }
 
-        void* GetMethodPointer(const char* m_pMethodName, int m_iArgs = -1)
+        inline void* GetMethodPointer(const char* m_pMethodName, int m_iArgs = -1)
         {
             return Class::Utils::GetMethodPointer(m_Object.m_pClass, m_pMethodName, m_iArgs);
         }
 
-        m_eClassPropType GetPropType(const char* m_pPropType)
+        inline m_eClassPropType GetPropType(const char* m_pPropType)
         {
             Unity::il2cppFieldInfo* pField = reinterpret_cast<Unity::il2cppFieldInfo*(IL2CPP_CALLING_CONVENTION)(void*, const char*)>(Functions.m_ClassGetFieldFromName)(m_Object.m_pClass, m_pPropType);
             if (pField)
@@ -419,7 +419,7 @@ namespace IL2CPP
         TReturn CallMethod(const char* m_pMethodName, TArgs... tArgs) { return CallMethod<TReturn>(GetMethodPointer(m_pMethodName), tArgs...); }
 
         template<typename TReturn, typename... TArgs>
-        TReturn CallMethodSafe(void* m_pMethod, TArgs... tArgs)
+        inline TReturn CallMethodSafe(void* m_pMethod, TArgs... tArgs)
         {
             if (!m_pMethod)
             {
@@ -435,12 +435,12 @@ namespace IL2CPP
         }
 
         template<typename TReturn, typename... TArgs>
-        TReturn CallMethodSafe(const char* m_pMethodName, TArgs... tArgs) { return CallMethodSafe<TReturn>(GetMethodPointer(m_pMethodName), tArgs...); }
+        inline TReturn CallMethodSafe(const char* m_pMethodName, TArgs... tArgs) { return CallMethodSafe<TReturn>(GetMethodPointer(m_pMethodName), tArgs...); }
 
         // Properties/Fields
 
         template<typename T>
-        T GetPropertyValue(const char* m_pPropertyName)
+        inline T GetPropertyValue(const char* m_pPropertyName)
         {
             Unity::il2cppPropertyInfo* pProperty = reinterpret_cast<Unity::il2cppPropertyInfo * (IL2CPP_CALLING_CONVENTION)(void*, const char*)>(Functions.m_ClassGetPropertyFromName)(m_Object.m_pClass, m_pPropertyName);
             if (pProperty && pProperty->m_pGet)
@@ -451,7 +451,7 @@ namespace IL2CPP
         }
 
         template<typename T>
-        void SetPropertyValue(const char* m_pPropertyName, T m_tValue)
+        inline void SetPropertyValue(const char* m_pPropertyName, T m_tValue)
         {
             Unity::il2cppPropertyInfo* pProperty = reinterpret_cast<Unity::il2cppPropertyInfo * (IL2CPP_CALLING_CONVENTION)(void*, const char*)>(Functions.m_ClassGetPropertyFromName)(m_Object.m_pClass, m_pPropertyName);
             if (pProperty && pProperty->m_pSet)
@@ -492,7 +492,7 @@ namespace IL2CPP
         }
 
         template<typename T>
-        T GetMemberValue(const char* m_pMemberName)
+        inline T GetMemberValue(const char* m_pMemberName)
         {
             Unity::il2cppFieldInfo* pField = reinterpret_cast<Unity::il2cppFieldInfo * (IL2CPP_CALLING_CONVENTION)(void*, const char*)>(Functions.m_ClassGetFieldFromName)(m_Object.m_pClass, m_pMemberName);
             if (pField)
@@ -507,7 +507,7 @@ namespace IL2CPP
         }
 
         template<typename T>
-        void SetMemberValue(const char* m_pMemberName, T m_tValue)
+        inline void SetMemberValue(const char* m_pMemberName, T m_tValue)
         {
             Unity::il2cppFieldInfo* pField = reinterpret_cast<Unity::il2cppFieldInfo * (IL2CPP_CALLING_CONVENTION)(void*, const char*)>(Functions.m_ClassGetFieldFromName)(m_Object.m_pClass, m_pMemberName);
             if (pField)
@@ -561,7 +561,7 @@ namespace IL2CPP
         }
 
         template<typename T>
-        T GetObscuredValue(const char* m_pMemberName)
+        inline T GetObscuredValue(const char* m_pMemberName)
         {
             Unity::il2cppFieldInfo* m_pField = reinterpret_cast<Unity::il2cppFieldInfo * (IL2CPP_CALLING_CONVENTION)(void*, const char*)>(Functions.m_ClassGetFieldFromName)(m_Object.m_pClass, m_pMemberName);
             return GetObscuredViaOffset<T>(m_pField ? m_pField->m_iOffset : -1);
@@ -603,7 +603,7 @@ namespace IL2CPP
         }
 
         template<typename T>
-        void SetObscuredValue(const char* m_pMemberName, T m_tValue)
+        inline void SetObscuredValue(const char* m_pMemberName, T m_tValue)
         {
             Unity::il2cppFieldInfo* m_pField = reinterpret_cast<Unity::il2cppFieldInfo * (IL2CPP_CALLING_CONVENTION)(void*, const char*)>(Functions.m_ClassGetFieldFromName)(m_Object.m_pClass, m_pMemberName);
             if (!m_pField)

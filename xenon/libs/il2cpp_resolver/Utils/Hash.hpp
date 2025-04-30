@@ -6,7 +6,7 @@ namespace IL2CPP
 	{
         namespace Hash
         {
-            uint32_t Get(const char* m_String)
+            inline uint32_t Get(const char* m_String)
             {
                 uint32_t m_Hash = 0;
 
@@ -24,7 +24,7 @@ namespace IL2CPP
                 return m_Hash;
             }
 
-            constexpr uint32_t GetCompileTime(const char* m_String)
+            inline constexpr uint32_t GetCompileTime(const char* m_String)
             {
                 uint32_t m_Hash = 0;
 

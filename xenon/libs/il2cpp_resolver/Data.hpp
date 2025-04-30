@@ -6,7 +6,7 @@ namespace IL2CPP
 	{
 		HMODULE m_GameAssembly = nullptr;
 	};
-	Globals_t Globals;
+	inline Globals_t Globals;
 
 	struct Functions_t
 	{
@@ -43,5 +43,5 @@ namespace IL2CPP
 		void* m_FieldStaticGetValue = nullptr;
 		void* m_FieldStaticSetValue = nullptr;
 	};
-	Functions_t Functions;
+	inline Functions_t Functions;
 }

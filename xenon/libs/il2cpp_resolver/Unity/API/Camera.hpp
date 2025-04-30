@@ -13,37 +13,37 @@ namespace Unity
 		void* m_SetFieldOfView = nullptr;
 		void* m_WorldToScreen = nullptr;
 	};
-	CameraFunctions_t m_CameraFunctions;
+	inline CameraFunctions_t m_CameraFunctions;
 
 	class CCamera : public CGameObject
 	{
 	public:
-		float GetDepth()
+		inline float GetDepth()
 		{
 			return reinterpret_cast<float(UNITY_CALLING_CONVENTION)(void*)>(m_CameraFunctions.m_GetDepth)(this);
 		}
 
-		void SetDepth(float m_fValue)
+		inline void SetDepth(float m_fValue)
 		{
 			reinterpret_cast<void(UNITY_CALLING_CONVENTION)(void*, float)>(m_CameraFunctions.m_SetDepth)(this, m_fValue);
 		}
 
-		float GetOrthographicSize()
+		inline float GetOrthographicSize()
 		{
 			return reinterpret_cast<float(UNITY_CALLING_CONVENTION)(void*)>(m_CameraFunctions.m_GetOrthographicSize)(this);
 		}
 
-		float GetFieldOfView()
+		inline float GetFieldOfView()
 		{
 			return reinterpret_cast<float(UNITY_CALLING_CONVENTION)(void*)>(m_CameraFunctions.m_GetFieldOfView)(this);
 		}
 
-		void SetFieldOfView(float m_fValue)
+		inline void SetFieldOfView(float m_fValue)
 		{
 			reinterpret_cast<void(UNITY_CALLING_CONVENTION)(void*, float)>(m_CameraFunctions.m_SetFieldOfView)(this, m_fValue);
 		}
 
-		void WorldToScreen(Vector3& m_vWorld, Vector3& m_vScreen, int m_iEye = 2)
+		inline void WorldToScreen(Vector3& m_vWorld, Vector3& m_vScreen, int m_iEye = 2)
 		{
 			reinterpret_cast<void(UNITY_CALLING_CONVENTION)(void*, Vector3&, int, Vector3&)>(m_CameraFunctions.m_WorldToScreen)(this, m_vWorld, m_iEye, m_vScreen);
 		}
@@ -51,7 +51,7 @@ namespace Unity
 
 	namespace Camera
 	{
-		void Initialize()
+		inline void Initialize()
 		{
 			IL2CPP::SystemTypeCache::Initializer::Add(UNITY_CAMERA_CLASS);
 
@@ -65,12 +65,12 @@ namespace Unity
 			m_CameraFunctions.m_WorldToScreen		= IL2CPP::ResolveCall(UNITY_CAMERA_WORLDTOSCREEN);
 		}
 
-		CCamera* GetCurrent()
+		inline CCamera* GetCurrent()
 		{
 			return reinterpret_cast<CCamera*(UNITY_CALLING_CONVENTION)()>(m_CameraFunctions.m_GetCurrent)();
 		}
 
-		CCamera* GetMain()
+		inline CCamera* GetMain()
 		{
 			return reinterpret_cast<CCamera*(UNITY_CALLING_CONVENTION)()>(m_CameraFunctions.m_GetMain)();
 		}
