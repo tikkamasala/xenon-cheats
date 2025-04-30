@@ -144,6 +144,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="WorldToScreen.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="RedMatch2Dump\il2cpp.h" />
